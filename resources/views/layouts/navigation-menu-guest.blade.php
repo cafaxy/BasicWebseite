@@ -5,9 +5,15 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
+                    @auth
                     <a href="{{ route('dashboard') }}">
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
+                            @else
+                            <a href="{{ route('index') }}">
+                                <x-jet-application-mark class="block h-9 w-auto" />
+                            </a>
+                        @endauth
                 </div>
 
                 <!-- Navigation Links -->
