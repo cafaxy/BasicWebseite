@@ -46,6 +46,12 @@
                 </div>
             @endif
 
+            <div class="mt-4">
+                <x-jet-label for="captcha" value="{{ __('Captcha') }}" />
+                {!! captcha_img() !!}
+                <x-jet-input id="captcha" class="block mt-1 w-full" type="text" name="captcha" required />
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}

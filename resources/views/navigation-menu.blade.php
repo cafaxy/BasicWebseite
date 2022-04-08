@@ -74,7 +74,10 @@
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition" style="padding-left: 5px">
+                                    <span style="line-height: 31px;font-size: 15px;margin-right: 9px;">
+                                        {!! __('Hello, <b>:name</b>', ['name' => htmlspecialchars(auth()->user()->name)]) !!}
+                                    </span>
                                     <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else
