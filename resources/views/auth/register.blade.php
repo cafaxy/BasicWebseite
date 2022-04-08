@@ -47,9 +47,13 @@
             @endif
 
             <div class="mt-4">
+                @if(env('USE_HCAPTCHA', false))
+                {!! HCaptcha::display() !!}
+                @else
                 <x-jet-label for="captcha" value="{{ __('Captcha') }}" />
                 {!! captcha_img() !!}
                 <x-jet-input id="captcha" class="block mt-1 w-full" type="text" name="captcha" required />
+                @endif
             </div>
 
             <div class="flex items-center justify-end mt-4">

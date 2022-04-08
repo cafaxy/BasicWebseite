@@ -145,6 +145,11 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+
+        'h-captcha-response' => [
+            'required' => 'Please verify that you are not a robot.',
+            'captcha' => 'Captcha error! try again later or contact site admin.',
+        ],
     ],
 
     /*
@@ -158,6 +163,6 @@ return [
     |
     */
 
-    'attributes' => [],
+    'captcha' => 'Invalid captcha.'
 
 ];
